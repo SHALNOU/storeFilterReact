@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import "../src/App.css"
+
 
 interface projectsFace {
 	defaultFilter: string,
@@ -107,7 +109,7 @@ interface filterBar {
 function Toolbar({ filters, selected, onSelectFilter }: filterBar) {
 
 	return (
-		<div>
+		<div className='button'>
 			{filters.map((filter) => (
 				<button
 					key={filter} onClick={() => onSelectFilter(filter)}
@@ -127,7 +129,7 @@ interface ProjectListProps {
 
 function ProjectList({ projects }: ProjectListProps) {
 	return (
-		<div>
+		<div className='div-flex'>
 			{projects.map((project, index) => (
 				<div key={index}>
 					<img src={project.img} alt={project.category} />
